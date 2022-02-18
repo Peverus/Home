@@ -1,0 +1,495 @@
+
+/* body= pantalla
+    los colores se pueden representar:
+     * con su nomnre en inglés  --> NO LO USAMOS nunca de los jamases
+     * rgb (255,255,255)        --> NO SE USA
+     * hexadecimal #2BaD4t      --> 2º opción
+     * hsl  hsl(226 63% 45%)    --> 1ª opción
+
+
+      ---------------- ETIQUETAS DE LAS PROPIEDADES DE ESTILO DE LAS CAJAS -------------
+
+     background-color   = color de fondo
+            border      = marco
+            margin      = margen  externo
+            padding     = margen interno
+              position    = 
+            z-index     = profundidad
+
+    ---------------------- MANERAS DE DEFINIR TAMAÑOS ----------------------------------
+    ------------------------------------------------------------------------------------
+
+    1. POR PIXELES = px no usa/ no se ajusta a todas las pantall
+
+    2. UNIDADES DE MEDIDA RELATIVAS A LA PANTALLA
+        /em/
+        rem/ es el más conveniente 
+                    arriba  drch   abajo    izq             
+            margin:  1em    2em     1em     4em
+
+                   arriba y abajo     izq y drch
+            margin:     1em             0em
+
+                    los 4 lados        
+            margin:     3em
+
+        auto sirve para centra
+
+            margin: 1rem auto
+        
+        se puede usar para 
+
+            + tamaño
+                    del texto
+                    del borde
+                    del borde  
+                    del magen
+                    del padding
+   
+    3. Porcentaje se usa para   
+                    +tamaño 
+                        100%  para el ancho
+                        100vh para la altura
+                           
+
+
+------------------ ETIQUETAS PARA TEXTO-------------------------------
+    
+                * COLOR         = color
+                * TOPOGRAFÍA    = font-family
+                * TAMAÑO        = fotn-size: 5rem
+                * GROSOR        = font-weigth: 400 texto normal; 
+                * DECORACIÓN    = text-decotartion: none
+                *alineación     = text-aling: left, rigth, ...
+
+    ------------------ ETIQUETAS PARA IMÁGENES -------------------------------            
+
+                                .logo{
+                                    max-width: 100%;
+                                }
+        Todas las imágenes estarán metidas en una caja. Por tanto todas las imagenes
+        se programarán para que ocupen el 100% del ancho de la caja
+
+                            .logo svg{
+                                heigth: 3rem
+                                width:  3rem
+                            }
+
+        A todos los svg hay que darles ancho y alto, 
+        si no les das altura y amplitud no paracen en la imagen.
+
+        Aun svg se la color con la propiedad "fill:" en el path
+                            
+                                .logo svg path{
+                                    fill:hsl(19, 100%, 50%)
+                                    transition
+         
+        Pseudoclases: 
+
+        los ":" condicionan la accion que realizará el elemneto, afinan el CSS  
+        
+        
+-----------------------------------   @media  -----------------------------------
+                                    
+             @media min-width: 1920px para TV 
+             @media max-width: 1024px para Tablet
+             @media max-width:  479px para móvil
+
+        Todo lo que se ponga dentro de "@media" afecta al tipo de pantalla en la que se va a ver.
+
+-----------------------------------  CSS grid o flex ------------------------------------
+
+
+Sino haces nada cada caja se coloca en la siguiente línea. Para poder ponerlas en una parrrila se utiliza la 
+funcionalidad grid o flex
+Al <div> que contiene el restos de cajas se le da la fincionalidad grid o flex
+
+     grid mejor usarlo para         .crud__table-grid{
+     páginas tipo colage                display: grid;
+                                        grid-template-colums: 25% 25% 25% 25%
+                                        grid-gap: 0.5
+                                    }
+
+                                    .crud__table-flex{
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        gap: 0.5em;                                        
+                                    }
+
+                                    .crud__table_flex-element{
+                                        flex-basis: 25%
+
+                    el combo que siempre se va a utilizar es 
+
+                                    display: flex;                                
+                                    justify-content: space-between
+
+
+
+
+     */
+
+
+/*====================
+====== Structure =====
+======================*/
+
+body{
+    background-color: rgb(75, 216, 241);                 
+    display:flex; 
+    flex-direction:column;    
+    margin:auto;
+    min-height: 100vh;
+}
+
+header{
+    display:flex;
+    height: 5vh;  
+    justify-content:space-between;
+    margin: 1rem 3rem;
+}
+
+main{
+    margin: 1em 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer{
+    margin-top: auto; 
+    width: 100%;
+}
+
+/*====================
+===== Typography =====
+======================*/
+
+h1, h2, h3, h4, h5, h6, a, p{
+    color: hsl(0, 0%, 0%);
+}
+
+h1, h2, h3, h4 {
+    font-family: "Ubuntu";
+}
+
+h5, h6 {
+    font-family: "Ubuntu Condensed";
+}
+
+a, td, p, button{
+    font-family: "Ubuntu";
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h4 {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+a:focus, a:hover {
+    outline: none;
+    outline-offset: 0;
+    text-decoration: none;
+}
+
+/*====================
+======= Image ========
+======================*/
+
+img {
+    max-width: 100%;
+}
+
+/*====================
+======= Header ======
+======================*/
+
+.logo-title{
+    display:flex;
+    justify-content:start;
+}
+
+.logo{
+    width: max-content;
+}
+
+.logo svg{
+    width: 10rem;
+    height: 10rem;
+}
+
+
+.logo svg path{
+    fill:rgb(216, 92, 35);
+}
+
+.logo{
+    margin-top: -3rem;
+}
+
+
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+    width: 20rem;
+}
+
+/*====================
+======= Slider ======
+======================*/
+
+.slider img{
+    margin: 0;
+    width: 100%;
+}
+
+.slider h2{
+    color: hsl(0, 67%, 41%);
+    text-align: right;
+}
+
+/*====================
+======= Destacados ===
+======================*/
+
+.destacados-titulo{
+    margin: 5rem 0;
+} 
+
+.destacados-titulo h2{ 
+    text-align: center;
+    height: 2rem;
+}
+
+.destacados-fichas{ 
+    display: flex;
+    gap: 0.3rem;
+}
+
+/*====================
+======= Services =====
+======================*/
+
+.services{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem;
+    margin-top: 5rem;
+}
+
+.services-text{
+    width: 60%;
+}
+
+.services-title{
+    margin-bottom: 1rem;
+}
+
+.services-title h3{
+    font-size: 2.5rem;
+}
+
+.services-img{
+    width: 35%;
+}
+
+.services-img img{
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.services-img img:hover{
+    border-radius: 50%;
+}
+
+
+
+.copyright{
+    margin-bottom: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+.author{
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+@media (min-width: 1920px) {
+
+    h1 {
+        font-size: 3.5em;
+    }
+    
+    h2 {
+        font-size: 3em;
+    }
+
+    .logo svg{
+        height: 4em;
+        width: 4em;
+    }
+
+    .crud__form-label label{
+        font-size: 2em;
+    }
+
+    .crud__form-input input, 
+    .crud__form-input textarea,
+    .crud__form-input select {
+        font-size: 1.5em;
+        padding: 0.3em;
+    }
+
+    .crud__store-button{
+        font-size: 1.5em;
+    }
+
+    .copyright p{
+        font-size: 1.5em;
+    }
+}
+
+
+@media (max-width:1024px) {
+
+    header{
+        height: max-content;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .logo svg{
+        height: 2em;
+        width: 2em;
+    }
+
+    .title{
+        margin-left: 0.5em;
+    }
+
+    .crud{
+        display: block;
+        margin: 1.5em 0;
+    }
+
+    .crud__table, .crud__form{
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .crud__table-grid{
+        grid-gap: 0;
+    }
+
+    .crud__table-flex{
+        gap: 0;
+    }
+
+    .crud__store-button{
+        font-size: 1em;
+        margin-top: 0.5em;
+    }
+
+    .copyright{
+        margin: 1em 0;
+    }
+
+    .author{
+        padding: 1em;
+    }
+}
+
+@media (max-width:479px) {
+
+    header{
+        height:min-content;
+        justify-content:center;
+    }
+
+    h1 {
+        font-size:0.5rem;
+    }
+    
+    h2 {
+        font-size: 0.75rem;
+    }
+
+    .logo{
+        height:auto;
+    }
+
+    .logo svg{
+        height: 0.5rem;
+        width: 0.5rem;
+    }
+    .div.menu{
+        font-size: rem;
+        justify-content: right;
+    }
+
+    .logo-title{
+        display:flex;
+        justify-content:center
+    }
+    
+    .logo{
+        width: max-content;
+    }
+    
+    .logo svg{
+        width: 1rem;
+        height: 1rem;
+    }
+        
+    .logo svg path{
+        fill:rgb(216, 92, 35);
+    }
+    
+    .logo{
+        margin-top: -3rem;
+    }
+        
+    .menu ul{
+        display: flex;
+        justify-content:right; 
+        width: 10rem;
+
+    .copyright{
+        margin: 1em 0;
+    }
+
+    .author{
+        padding: 1em;
+    }
+}
+
+
+
+
