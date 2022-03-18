@@ -270,6 +270,7 @@ a:focus, a:hover {
 .waves {
     position: relative;
     margin-bottom: 4rem;
+    
 }
 
 .waves :is(.wave) {
@@ -1222,6 +1223,7 @@ a:focus, a:hover {
 
     .header-menu-hamburger-open span{
         display: flex; 
+        border: 1px solid white;
         text-align: center;
         margin: 1rem 7.5rem;                     
     }
