@@ -1,30 +1,41 @@
+/*====================
+=======Structure======
+======================*/
 
-body{
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 45%, rgba(53,134,255,1) 45%);
+body{    
+    background: linear-gradient(180deg, rgb(255, 255, 255) 20%,rgb(243, 123, 11) 30%, rgb(250, 205, 3) 42%, rgba(53,134,255,1) 46%);
     display:flex; 
     flex-direction:column;    
-    margin:auto;
+    margin:auto;                   
     min-height: 100vh;
+    width: 100%;
 }
 
 header{
-    background-color: hsl(216, 89%, 48%);
-    display:flex;
-    height: max-content;  
-    justify-content:space-between;
-    padding: 1rem 5rem;
+    background-color: hsl(226, 63%, 45%);    
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    width: 90%;
+    z-index: 1500;
 }
 
 main{
-    margin: 1em 0;
+    margin: 2rem 0;
     width: 100%;
-    z-index: 10;
 }
 
 footer{
     margin-top: auto; 
     width: 100%;
+}
+
+.desktop-only{
+    display: revert;
+}
+
+.mobile-only{
+    display: none;
 }
 
 /*====================
@@ -50,7 +61,6 @@ footer{
 .desktop-four-columns .column{
     width: 22%;
 }
-
 
 .desktop-three-columns{
     display: flex;
@@ -98,24 +108,23 @@ footer{
 
 .desktop-two-columns-inline .column div{
     display: flex;
-    margin-right: 1em;
-}
-
-.desktop-one-column{
-    width: 100%;
+    margin-right: 1rem;
 }
 
 .desktop-one-column .column{
     width: 100%;
 }
 
+.desktop-one-column{
+    width: 100%;
+}
 
 /*====================
-===== Typography =====
+======Typography======
 ======================*/
 
 h1, h2, h3, h4, h5, h6, a, p{
-    color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
 }
 
 h1, h2, h3, h4 {
@@ -126,18 +135,18 @@ h5, h6 {
     font-family: "Ubuntu Condensed";
 }
 
-a, td, p, button{
+a, td, p, button, span, label{
     font-family: "Ubuntu";
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: 600;
     text-decoration: none;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 600;
     text-decoration: none;
 }
@@ -162,24 +171,105 @@ a:focus, a:hover {
     text-decoration: none;
 }
 
-.uppercase{
-    text-transform: uppercase;
-}
-
 /*====================
-======= Image ========
+======= Images ========
 ======================*/
 
-img {
-    max-width: 100%;
+.img {
+    width: 100%;
 }
 
 /*====================
 ======= Waves ========
 ======================*/
 
+.container-sun{
+    text-align:center;
+    position: relative;
+    z-index: -1;
+  }
+        
+  /* the svg element */
+  .svg-sun{
+    width:300px;
+    height:300px;
+  
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin:50% 50%;
+  
+  -webkit-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+  -moz-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+  -o-animation:spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+  -ms-animation: spin 25s linear infinite, sun-glow 3s 0s ease-in-out infinite;
+  animation: spin 25s linear infinite,sun-glow 3s 0s linear infinite;
+  
+  }
+  /* the circle element in the svg itself */
+  #sun{
+    stroke-width:18;
+    stroke-dasharray:2;
+    stroke-dashoffset:2;
+  }
+  /* animation for the sun glowing effect */
+  @-webkit-keyframes sun-glow { 
+      0% { fill: #f1c40f; stroke:#f1c40f;}
+      50% { fill: #e67e22; stroke:#e67e22;}
+      100% { fill: #f1c40f; stroke:#f1c40f;}
+  }
+  @-moz-keyframes sun-glow { 
+      0% { fill: #f1c40f; stroke:#f1c40f;}
+      50% { fill: #e67e22; stroke:#e67e22;}
+      100% { fill: #f1c40f; stroke:#f1c40f;}
+  }
+  @-o-keyframes sun-glow { 
+      0% { fill: #f1c40f; stroke:#f1c40f;}
+      50% { fill: #e67e22; stroke:#e67e22;}
+      100% { fill: #f1c40f; stroke:#f1c40f;}
+  }
+  @-ms-keyframes sun-glow { 
+      0% { fill: #f1c40f; stroke:#f1c40f;}
+      50% { fill: #e67e22; stroke:#e67e22;}
+      100% { fill: #f1c40f; stroke:#f1c40f;}
+  }
+  @keyframes sun-glow { 
+      0% { fill: #f1c40f; stroke:#f1c40f;}
+      50% { fill: #e67e22; stroke:#e67e22;}
+      100% { fill: #f1c40f; stroke:#f1c40f;}
+  }
+  
+  /* start spin animation */
+  @-webkit-keyframes spin{
+      100% {
+          -webkit-transform: rotate(360deg);
+      }
+  }
+  @-moz-keyframes spin{
+      100% {
+          -moz-transform: rotate(360deg);
+      }
+  }
+  @-o-keyframes spin{
+      100% {
+          -o-transform: rotate(360deg);
+      }
+  }
+  @-ms-keyframes spin{
+      100% {
+          -ms-transform: rotate(360deg);
+      }
+  }
+  @keyframes spin{
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+
 .waves {
     position: relative;
+    margin-bottom: 4rem;
 }
 
 .waves :is(.wave) {
@@ -187,7 +277,7 @@ img {
     position: absolute;
     width: 100%;
     height: 100px;
-    top: 35vh;
+    top: 120vh;
     left: 0;
     background-size: 1000px 100px;
 }
@@ -242,314 +332,798 @@ img {
     }
 }
 
-
 /*====================
-======= Header ======
+========Buttons=======
 ======================*/
 
-.logo-title{
-    display:flex;
-    width: max-content;       
+.featured-button{
+    background-image: linear-gradient(to right, #e08722 0%, #e6d707 50%, #0293f3 100%);
+    background-size: 200% auto;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+	font-weight: 600;
+	letter-spacing: 0;
+	line-height: 0px;
+    margin-top: 1rem;
+	min-width: 20%;
+	padding: 1rem 2rem;
+	transition: 0.5s;
+	text-decoration: none;
 }
 
-.logo{
-    width: max-content;
+.featured-button:hover{
+    background-size: 100% auto;
 }
 
-.logo svg{
-    width: 10rem;
-    height: 5rem;
-}
-
-.logo svg path{
-    fill:rgb(216, 92, 35);
-}
-
-.title{
-    margin: auto 0;
-}
-
-.title h1{
-    color: whitesmoke;
-}
-
-.menu{
-    margin: auto 0;
-}
-
-.menu ul{
-    color: hsl(19, 72%, 49%);
+.plus-minus-button{
     display: flex;
-    justify-content: space-around;
-    list-style: none;
-    width: 20rem;
+    height: 30;
 }
 
-.menu ul li a{
-    color: hsl(0, 0%, 100%);
+.plus-minus-button .plus-minus-input{
+    width: 15%;
 }
 
-/*====================
-======= Slider ======
-======================*/
-
-.slider{
-    height: 75vh;
-    margin-bottom: 10rem;
-    position: relative;
-}
-
-.slider img{
+.plus-minus-button .plus-minus-input input{
+    border: 0;
+    border-radius: 0;
+    font-family: 'Ubuntu';
+    font-weight: 600;
+    height: 100%;
+    text-align: center;
     width: 100%;
 }
 
-.slider-img, .slider-text{
-    position: absolute;
+.plus-minus-button .plus-minus-input input[type=number] {
+    -moz-appearance: textfield;
+    caret-color: transparent;
 }
 
-.slider-img{
+.plus-minus-button .plus-minus-input input:focus{
+    outline: none;
+}
+
+.plus-minus-button .plus-minus-button-element{
+    width: 15%;
+}
+
+.plus-minus-button .plus-minus-button-element button{
+    background-image: linear-gradient(to right, #253786 0%, #02A8B0 50%, #253786 100%);
+    background-size: 200% auto;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+	font-weight: 600;
+    height: 100%;
+	letter-spacing: 0;
+	line-height: 0px;
+    margin-top: 0;
+	min-width: 20%;
+	padding: 0;
+	transition: 0.5s;
+	text-decoration: none;
+    width: 100%;
+}
+
+.plus-minus-button .plus-minus-button-element button:hover{
+    background-size: 100% auto;
+}
+
+.plus-minus-button #left button{
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.plus-minus-button #right button{
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/*====================
+=======Header=========
+======================*/
+
+.header-logo{
+    display: flex;
+    width: max-content;
+}
+
+.header-logo-image svg{
+    height: 3rem;
+    width: 3rem;
+}
+
+.header-logo-image svg path{
+    fill:hsl(14, 100%, 50%);
+}
+
+.header-logo-title{
+    margin-left: 1rem;
+}
+
+.header-logo-title h1{
+    text-align: left;
+}
+
+.header-menu{
+    margin-left: auto;
+    width: max-content;
+}
+
+.header-menu ul li{
+    color:hsl(0, 0%, 100%);
+    cursor: pointer;
+    display: inline;
+    font-family: 'Ubuntu';
+    margin: 0 0.5rem;
+}
+
+/*====================
+========Home==========
+======================*/
+
+.slider{
+    height: 80vh;
+    position: relative;
+    width: 100%;
+}
+
+.slider-image{
+    max-height: 80vh;
+    overflow: hidden;
+    position: absolute;    
     z-index: 1000;
     width: 100%;
 }
 
-.slider-text{
+.slider-title{
+    background-color: hsla(0, 0%, 0%, 0.5);    
+    padding: 1.5rem 1rem;
+    position: absolute;
+    left: 10%;
+    top: 7vh;
     z-index: 1001;
-    top: 5%;
-    right: 15%;
 }
 
-.slider h2{
-    color: hsl(0, 0%, 100%);
+.slider-button{
+    position: absolute;
+    left: 25%;
+    top: 35vh;
+    z-index: 1001;
 }
 
-/*====================
-======= Destacados ===
-======================*/
+.featured{
+    margin: 0 auto;
+    width: 90%;
+}
 
-.destacados-titulo{
-    margin: 5rem 0;
-} 
+.featured-element{
+    background-color: linear-gradient(to right,  orange 0%, blue 100%);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
 
-.destacados-titulo h2{ 
+.featured-title{
+    font-size: 1.5rem;
+    margin: 0 0 2rem;
     text-align: center;
-    height: 2rem;
+    position: relative;
 }
 
-.destacados-fichas{ 
+.featured-element-image-price{
+    position: relative;
+}
+
+.featured-element-price{
+    align-content: center;
+    background-color: hsla(0, 0%, 0%, 0.5);
     display: flex;
-    gap: 0.3rem;
-    background-color: hsl(216, 89%, 48%);
-
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1001;
 }
 
-.destacados-ficha-descripción{
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 25%;
-    text-size-adjust:inherit;
+.featured-element-price:hover{
+    cursor: pointer;
+    opacity: .9;
 }
 
-/*====================
-======= Services =====
-======================*/
+.featured-element-price h4{
+    font-size: 2rem;
+    text-align: center;
+}
 
-.services{
+.featured-element-image{
+    position: relative;
+    z-index: 1000;
+}
+
+.featured-element-image img{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    max-width: 100%;
+    
+}
+
+.featured-element-description{
+    border: 1px solid hsl(226, 71%, 63%);;
+    border-top: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.featured-element-title{
+    margin-bottom: 0.5rem;
+}
+
+.featured-element-title h2{
+    font-size: 1rem;
+}
+
+.featured-element-category{
+    margin-bottom: 0.5rem;
+}
+
+.featured-element-category h3{
+    color:hsl(20, 75%, 2%);
+    font-family: "Ubuntu Condensed";
+    font-size: 1rem;
+}
+
+.featured-element-text{
+    margin-bottom: 0.5rem;
+}
+
+.featured-element-text p{
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.textual-banner{
     display: flex;
-    justify-content: space-between;
-    margin: 3rem;
-    margin-top: 5rem;
+    margin: 3rem auto;
+    width: 90%;
 }
 
-.services-text{
-    width: 60%;
+.textual-banner-description{
+    width: 100%;
 }
 
-.services-title{
-    margin-bottom: 1rem;
+.textual-banner-description p{
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-.services-title h3{
-    font-size: 2.5rem;
+.textual-banner-image{
+    width: 40%;
 }
 
-.services-img{
-    width: 35%;
-}
-
-.services-img img{
+.textual-banner-image img{
     border-radius: 50%;
     box-shadow: 5px 5px 15px 5px #000000;
 }
 
-.services-img img:hover{
-    border-radius: 50%;
-}
-
 /*====================
-===== Contact=====
-======================*/
-
-.contact{
-    margin: 0 auto;
-    width: 80%;
-}
-
-.contact-title{
-    margin: 5rem 0;
-}
-
-.contact-title h2{
-    text-align: center;
-}
-
-.contact-data-option{
-    margin: 3rem;    
-}
-
-.contact-data-option-icon{
-    display: inline;    
-    margin-right: 2rem;    
-}
-
-.contact-data-option-icon svg{
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.contact-data-option-text{
-    display: inline;
-}
-
-.contact-form-element{
-    margin-bottom: 2rem;
-}
-
-.contact-form-element-label{
-    margin-bottom: .5rem;
-}
-
-.contact-form-element-input{
-    border-radius: 5%;
-} 
-
-.contact-form-element-input input{
-    width: 98%;        
-}
-
-.contact-form-element-input textarea{
-     width: 100%;
-     height: 20vh;
-     border-radius: 5%;
-}
-
-.contact-form-element-button button{
-    background-color: hsl(239, 100%, 50%);
-    border-radius: 10%;
-    border-color: yellow;
-    color: hsl(34, 78%, 91%);       
-    float: right;
-    padding: .5rem 1rem;
-}
-
-/*====================
-======= Products =======
+======Products========
 ======================*/
 
 .products{
+    margin: 4rem auto;
+    width: 90%;
+}
+
+.products-category{
+    border-right: 2px solid hsl(226, 71%, 63%);
+    height: 100%;
+}
+
+.products-category-title{
+    margin-bottom: 1rem;
+}
+
+.products-category-list ul li{
+    color: hsl(0, 0%, 100%);
+    font-family: 'Ubuntu';
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.products-list-topbar{
+    margin: 0.5rem 0 2rem 0;
+}
+
+.products-list-topbar-show-products span{
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2rem;
+}
+
+.products-list-topbar-filter{
+    margin-left: auto;
+    width: max-content;
+}
+
+.products-list-topbar-filter-element select{
+   font-family: 'Ubuntu';
+   font-weight: 600;
+   padding: 0.5rem 1rem;
+}
+
+.products-list-topbar-filter-element select:focus{
+    outline: none;
+}
+
+.products-list-gallery-product{
+    border: 0.3rem solid hsl(0, 0%, 100%);
+    border-radius: 0.5em;
+    box-shadow: 5px 5px 14px 0px hsl(0, 0%, 20%);
+    cursor: pointer;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.products-list-gallery-product-image{
+    position: relative;
+}
+
+.products-list-gallery-product-title{
+    padding: 1rem 0;
+}	 
+
+.products-list-gallery-product-title h2{
+    font-size: 1.2rem;
+    text-align: center;
+}	
+
+.products-list-gallery-product-price{
+    background-color: hsla(0, 0%, 0%, 0.5);
+    padding: 0.5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.products-list-gallery-product-price span{
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2rem;
+}
+
+.products-list-gallery-product-add-to-cart button{
+    border-radius: 0;
+    font-size: 1rem;
+    padding: 1.5rem 0;
+    margin: 0;
+    width: 100%;
+}
+
+/*====================
+======Product=========
+======================*/
+
+.product{
+    margin: 4rem auto;
+    width: 90%;
+}
+
+.product-image-gallery{
+    margin: 2rem 10%;
+    width: 80%;
+}
+
+.product-image-gallery-element{
+    cursor: pointer;
+}
+
+.product-info-title{
+    margin-bottom: 1rem;
+}
+
+.product-info-price{
+    margin-bottom: 1rem;
+}
+
+.product-info-description{
+    margin-bottom: 1rem;
+}
+
+.product-info-description p{
+    margin-bottom: 0.5rem;
+    text-align: justify;
+}
+
+.product-info-plus-minus{
+    display: flex;
+    margin: 3rem 0;
+}
+
+.product-info-plus-minus-title{
+    margin-right: 3rem;
+}
+
+.product-info-plus-minus-title span{
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+/*====================
+=========Cart=========
+======================*/
+
+.cart{
     margin: 2rem auto;
     width: 90%;
 }
 
-.categories-title h3{ 
-    font-size: 2rem;
+.cart-title{
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.cart-title h2{
     text-align: center;
+}
+
+.cart-table table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.cart-table table th{
+    border-bottom: 0.2rem solid hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Ubuntu';
+    font-size: 1.2rem;
     font-weight: 600;
-}
-
-.categories-list h4{ 
+    padding: 1rem;
     text-align: center;
-    font-size: 1.5rem;
-    padding: 0.3rem;
 }
 
-.product-menu{
+.cart-table table td{
+    color: hsl(0, 0%, 100%);
+    font-family: 'Ubuntu';
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.cart-table table td .plus-minus-button{
+    height: 40;
+    justify-content: center;
+}
+
+.cart-resume{
+    border: 0.1rem solid hsl(0, 0%, 100%);
+    margin-left: auto;
+    margin-top: 5rem;
+    width: 30%;
+}
+
+.cart-resume-title{
+    background-color: hsl(0, 0%, 100%);
+    margin-bottom: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+.cart-resume-title h3{
+    color: hsl(226, 63%, 45%);
+    text-align: center;
+}
+
+.cart-resume-element{
+    padding: 0 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.cart-resume-element h3{
+    text-align: center;
+}
+
+#cart-resume-element-total{
+    border-top: 0.1rem solid hsl(0, 0%, 100%);
+    padding-top: 0.5rem;
+}
+
+.cart-buttons{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
-    padding: 1rem 2rem;
-}
-
-.product-menu-many span{
-    color: black;
-    border: #000000;        
-}
-
-.desktop-three-columns{
-    margin-bottom: 3rem;
-}
-
-.product{
-    border: #000000;
-}
-
-.product-image{
-    border-radius: 5rem;
-
-}
-
-.product-description{
-    background-color: hsl(240, 100%, 50%);
-    color: white;
-    text-align: center;
-}
-
-.product-price h4{
-    background-color: hsl(240, 100%, 50%);
-    color: white;
-    text-align: center;
-}
-
-.product-button button{
-    background-color: rgb(247, 160, 0);
-    border: none;
-    border-radius: 2rem;  
-    float: right;
-    font-weight: 600;  
-    margin-top: .5rem;
-    padding: .5rem 1rem;  
+    margin-top: 2rem;
+    margin-left: auto;
+    width: 30%;
 }
 
 /*====================
-======= Footer =====
+======Checkout========
 ======================*/
 
-.footer-contact{
-    background-color: rgb(27, 27, 216);
-    fill: #000000;
+.checkout{
+    margin: 2rem auto 4rem auto;
+    width: 90%;
 }
 
-/* @media (min-width: 1920px)  */
+.checkout-title{
+    margin-bottom: 2rem;
+    width: 100%;
+}
 
-/* @media (max-width: 1024px)  */
+.checkout-title h2{
+    text-align: center;
+}
 
+.checkout-form{
+    border-right: 0.1rem solid hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem 15%;
+    width: 70%;
+}
 
-@media (max-width: 479px) {
+.checkout-form-element{
+    margin-bottom: 1rem;
+}
 
+.checkout-form-element .checkout-form-label{
+    margin-bottom: 0.5rem;
+}
+
+.checkout-form-element .checkout-form-label label{
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+.checkout-form-element .checkout-form-input input{
+    padding: 0.2rem 1rem;
+    width: 100%;
+}
+
+.checkout-form-element .checkout-form-input input:focus{
+    outline: none;
+}
+
+.checkout-form-element .checkout-form-input select{
+    font-family: 'Ubuntu';
+    font-weight: 600;
+    padding: 0.2rem 1rem;
+    width: 100%;
+}
+
+.checkout-submit{
+    padding: 1rem 10%;
+    width: 80%
+}
+
+.checkout-resume{
+    border: 0.1rem solid hsl(0, 0%, 100%);
+    margin-left: auto;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.checkout-resume-title{
+    background-color: hsl(0, 0%, 100%);
+    margin-bottom: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+.checkout-resume-title h3{
+    color: hsl(226, 63%, 45%);
+    text-align: center;
+}
+
+.checkout-resume-element{
+    padding: 0 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.checkout-resume-element h3{
+    text-align: center;
+}
+
+#checkout-resume-element-total{
+    border-top: 0.1rem solid hsl(0, 0%, 100%);
+    padding-top: 0.5rem;
+}
+
+.checkout-payment-form{
+    margin-top: 2rem;
+}
+
+.checkout-payment-form-element{
+    margin-bottom: 1rem;
+}
+
+.checkout-payent-form-radio,
+.checkout-payent-form-radio-label{
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.checkout-payent-form-radio-label label{
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+.checkout-payment-button{
+    margin-left: auto;
+    width: max-content;
+}
+
+/*====================
+=======Contact========
+======================*/
+
+.contact{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.contact-title{
+    margin: 10vh 0;
+}
+
+.contact-title h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contact-info-option{
+    margin-bottom: 2rem;
+}
+
+.contact-info-description{
+    margin-bottom: 2rem;
+}
+
+.contact-info-description p{
+    font-size: 1.5rem;
+}
+
+.contact-info-option-icon{
+    display: inline;
+    margin-right: 1rem;
+}
+
+.contact-info-option-icon svg{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.contact-info-option-icon svg path{
+    fill:hsl(183, 98%, 35%);
+}
+
+.contact-info-option-text{
+    display: inline;
+}
+
+.contact-info-option-text span{
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2rem;
+}
+
+.contact-form-element{
+    margin-bottom: 1rem;
+}
+
+.contact-form-element-label{
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-element-label label{
+    color: hsl(0, 0%, 100%);
+}
+
+.contact-form-element-input{
+    width: 100%;
+}
+
+.contact-form-element-input input{
+    padding: 0.2rem 2%;
+    width: 96%;
+}
+
+.contact-form-element-input input:focus{
+    outline: none;
+}
+
+.contact-form-element-input textarea{
+    height: 20vh;
+    font-family: 'Ubuntu';
+    padding: 0.2rem 2%;
+    width: 98%;
+}
+
+.contact-form-element-input textarea:focus{
+    outline: none;
+}
+
+.contact-form-element-button{
+    margin-left: auto;
+    width: max-content;
+}
+
+/*====================
+========Footer========
+======================*/
+
+.footer-element{
+    width: 100%;
+}
+
+.footer-element p{
+    text-align: center;
+}
+
+@media (max-width:479px) {
 
     /*====================
-    === Structure ===
+    =======Structure======
     ======================*/
+
     body{
-        background: rgb(255,255,255);
-        background: linear-gradient(180deg, rgba(255,255,255,1) 15%, rgba(53,134,255,1) 15%); 
+        background: linear-gradient(180deg, rgb(255, 255, 255) 5%,rgb(243, 123, 11) 15%, rgb(250, 205, 3) 21%, rgba(53,134,255,1) 24%);
+        min-height: 100vh;
+        width: 100%;
+        z-index: 0;        
     }
 
-    header{
-        display: block;
-        padding: 1rem 1rem;
+    .waves :is(.wave){
+        background-image: url('/img/wave.png');
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        top: 125vh;
+        left: 0;
+        background-size: 1000px 100px;
     }
 
-     /*====================
-    === Mobile Columns ===
+    main{
+        width: 100%;
+    }
+
+    .desktop-only{
+        display: none;
+    }
+
+    .mobile-only{
+        display: revert;
+    }
+
+    /*====================
+    =========Buttons======
+    ======================*/
+    
+    .plus-minus-button .plus-minus-button-element {
+        width: 100%;
+    }
+
+    .plus-minus-button .plus-minus-input {
+        width: 100%;
+    }
+
+    .plus-minus-button-element{
+        width: 100%;
+    }
+
+    .plus-minus-button-element button{
+        border-radius: 0.2rem;
+        margin-top: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+    
+    /*====================
+    ========Columns=======
     ======================*/
 
     .mobile-four-columns{
@@ -592,17 +1166,9 @@ img {
         width: 48%;
     }
 
-    .desktop-two-columns-aside .column-aside{
-        display: none;
-    }
-
-    .mobile-two-columns-aside .column-main{
-        width: 100%;
-    }
-
-
     .mobile-one-column{
         width: 100%;
+        display: block;
     }
 
     .mobile-one-column .column{
@@ -613,114 +1179,268 @@ img {
         display: inherit;
         width: 100%;
     }
-
+    
     .mobile-one-column-inline .column{
         border-bottom: 1px solid hsl(0, 0%, 87%);
         display: flex;
-        margin-bottom: 1em;
+        margin-bottom: 1rem;
         width: 100%;
     }
-
+    
     .mobile-one-column-inline .column div{
         display: inherit;
-        margin-right: 1em;
+        margin-right: 1rem;
         width: 100%;
     }
 
     /*====================
-    === Header ===
+    ========Header========
     ======================*/
-
-    .menu{
+    
+    .header-logo-title{
         display: none;
     }
 
-    .logo{
-        margin: -2em 1em 0 0;
-    } 
-
-    .logo svg{
-        height: 7em;
-        width: 7em;
+    .header-menu-hamburger{
+        margin-top: 0.5rem;
+        margin-left: auto;
+        width: 30%;
     }
 
-    .title h1{
-        font-size: 2rem;
+    .header-menu-hamburger-open{
+        background-color: hsl(212, 72%, 44%);        
+        color: white;    
+        height: 100vh;
+        left: 0;
+        position: fixed;        
         text-align: center;
+        top: -100vh;
+        transition: all 1s;
+        width: 100%;
+        z-index: 5000;
     }
 
-    /*====================
-    ======== Home ========
-    ======================*/
+    .header-menu-hamburger-open span{
+        display: flex; 
+        text-align: center;
+        margin: 1rem 7.5rem;                     
+    }
 
-    .slider{
-        flex-wrap: wrap;        
+    .header-menu-hamburger-open.active{
+        top: 7vh;
+    }
+
+    .header-menu-hamburger #collapse-button {
+        border: 0;
+        background: transparent;
+        cursor: pointer;        
+        width: 100%;
     }
     
-    .destacados-titulo{
-        margin: 2rem 0;
-    }
-
-    .destacados-fichas{
-        flex-wrap: wrap;
+    .header-menu-hamburger #collapse-button:focus {
+        outline:0;
     }
     
-    .services{
+    .header-menu-hamburger #collapse-button span {
+        background: white;
+        border-radius: 1rem;
         display: block;
-        margin: 1em;
-    }
-
-    .services-text{
+        height: 5px;
+        margin: 0.5rem auto;
+        transition: all 0.6s cubic-bezier(0.810, -0.330, 0.345, 1.375);
         width: 100%;
     }
 
-    .services-img{
-        margin: 1em auto;
-        width: 80%;
+    .header-menu-hamburger #collapse-button span:first-child {
+        margin: 0;
     }
     
-    /*====================
-    ======= Contact =====
-    ======================*/
-
-    .mobile-one-column{
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
+    .header-menu-hamburger #collapse-button.active span:first-of-type {
+        transform: rotate(45deg) translate(1.1em, 1.1em);
     }
-
-    .mobile-one-column .column {
-        width: 100%;
+    
+    .header-menu-hamburger .header-menu-hamburger #collapse-button.active span:nth-of-type(2) {
+        opacity: 0;
     }
-
-    .mobile-one-column .contact-data-option{ 
-        display: column;
-        margin: 0;       
+    
+    .header-menu-hamburger .header-menu-hamburger #collapse-button.active span:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
     }
-
-    .mobile-one-column .contact-data{ 
-        margin-bottom: 2rem;        
+    
+    .header-menu-hamburger .header-menu-hamburger #collapse-button span {
+        opacity: 1;
+        margin: 0.5rem auto;
+        transform: none;
     }
 
     /*====================
-    ======= Products =====
+    ========Home==========
     ======================*/
     
-    .products{
-        margin: 0 auto;
-        width: 80%;
-    }
-    
-    .product-menu{
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 auto;
+    .slider-title{
+        top: 5vh;
     }
 
-    .column{
+    .slider-button{
+        top: 30vh;
+    }
+
+    .featured-element{
+        margin-bottom: 2rem;
+    }
+
+    .textual-banner-image img{
+        border-radius: 50%;
+        box-shadow: 5px 5px 15px 5px #000000;
+        
+    }
+
+    .textual-banner-description p{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+
+    
+    /*====================
+    ======Products========
+    ======================*/
+
+    .products-category{
+        display: none;
+    }
+
+    .products-list-topbar-filter{
+        margin: 0;
+        width: 100%;
+    }
+
+    .products-list-topbar-filter select{
+        width: 100%;
+    }
+
+
+    .products-list-topbar-show-products{
         margin-bottom: 1rem;
     }
 
+    .products-list-topbar-show-products span{
+        font-size: 0.9rem;
+    }
+
+    .products-list-topbar-filter-element{
+        margin-bottom: 0.5rem;
+    }
+
+    /*====================
+    ======Product=========
+    ======================*/
+
+    .product-image-gallery{
+        margin: 2rem 0;
+        width: 100%;
+    }
+
+    .product-info-title h2{
+        font-size: 1.2rem;
+    }
+
+    .product-info-price h3{ 
+        font-size: 1rem;
+    }
     
+    .product-info-plus-minus-title {
+        margin-right: 5rem;
+    }
+
+    .product-info-add-to-cart{
+        margin: 0 auto;
+        width: max-content;
+    }
+
+    /*====================
+    =======Cart=========
+    ======================*/
+
+    .cart-table table td{
+        font-size: 0.9rem;
+        padding: 0.5rem 0.2rem;
+    }
+
+    .cart-table table td .plus-minus-button {
+        width: 100;
+    }
+
+    .cart-resume{
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .cart-buttons{
+        margin: 2rem 0;
+        width: 100%;
+    }
+
+    /*====================
+    =======Checkout=======
+    ======================*/
+
+    .checkout-title{
+        margin-bottom: 1rem;
+    }
+
+    .checkout-form{
+        border: 0;
+        height: max-content;
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .checkout-resume{
+        margin-top: 0;
+    }
+
+    .checkout-payment-button{
+        margin: 0 auto;
+        width: max-content;
+    }
+
+    /*====================
+    =======Contact========
+    ======================*/
+
+    .contact{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .contact-title{
+        margin: 5vh 0;
+    }
+
+    .contact-title h2{
+        font-size: 1.5rem;
+    }
+    
+    .contact-info{
+        width: 100%;
+    }
+
+    .contact-info-option-text span{
+        font-size: 1rem;
+    }
+
+    .contact-form-element-button{
+        margin: 0 auto;
+    }
 }
 
+@media (max-width:1024px) {
+
+ 
+}
+
+@media (min-width: 1920px) {
+
+
+}

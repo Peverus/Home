@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="img/logo-shark-full-color.svg">
+		<link rel="shortcut icon" href="img/logo-shark-full-color.svg" style="color: orange">
 
-		<title>Título</title>
+		<title>Disfruta de nadar y bucear con tiburones. Nunca lo olvidarás</title>
 		<meta name="description" content="descripción de la web, se recomienda 90 caracteres">
         <meta name="keywords" 	 content="palabras clave, separadas, por comas">
 
@@ -23,15 +23,16 @@
     
     <body>
 
-        <div class="waves">
+        <div class="waves desktop-only">
             <div class="wave" id="wave1"></div>
             <div class="wave" id="wave2"></div>
             <div class="wave" id="wave3"></div>
             <div class="wave" id="wave4"></div>
         </div>
-        
+
+               
         <header>
-            <div class="desktop-two-columns">
+            <div class="desktop-two-columns mobile-two-columns">
                 <div class="column">
                     <div class="header-logo">
                         <div class="header-logo-image">
@@ -50,7 +51,7 @@
                         <div class="header-menu desktop-only">
                             <ul>
                                 <li><a href="index.html">Inicio</a></li>
-                                <li><a href="products.html">Reservas</a></li>
+                                <li><a href="product.html">Reservas</a></li>
                                 <li><a href="products.html">Material</a></li>
                                 <li><a href="contact.html">Contacto</a></li>                                
                             </ul>
@@ -60,11 +61,17 @@
                             <button type="button" id="collapse-button">
                                 <span></span>
                                 <span></span>
-                                <span></span>
-                            </button>
-                        </div> 
-                    </nav>
-                </div>
+                                <span></span>                                
+                            </button>                            
+                        </div>                         
+                    </nav>                    
+                </div>                
+            </div>
+            <div class="header-menu-hamburger-open active mobile-only" id="mobile-menu">
+                <span>Inicio</span>
+                <span>Reservas</span>
+                <span>Material</span>
+                <span>Contacto</span>
             </div>                      
         </header>
 
@@ -72,17 +79,17 @@
             <div class="home">
                 <div class="desktop-one-column mobile-one-column">
                     <div class="column">
-                        <div class="home-slider">
-                            <div class="home-slider-image">
+                        <div class="slider">
+                            <div class="slider-image">
                                 <img class="desktop-only" src="img/home-desktop.webp" alt="nada con tiburones" >
-                                <img class="mobile-only" src="img/home-desktop.webp" alt="alquiler de llaut en Mallorca" >
+                                <img class="mobile-only" src="img/home-desktop.webp" alt="Buceo con Sharking" >
                             </div>
             
-                            <div class="home-slider-title">
+                            <div class="slider-title">
                                 <h2>Vive una experiencia inolvidable</h2>
                             </div>
             
-                            <div class="home-slider-button">
+                            <div class="slider-button">
                                 <button class="featured-button">Reservar</button>
                             </div>
                         </div> 
@@ -90,111 +97,117 @@
                     </div>
                 </div>
 
-                <div class="home-featured">
+                <div class="featured">
 
                     <div class="desktop-one-column mobile-one-column">
                         <div class="column">
-                            <div class="home-featured-title">
+                            <div class="container-sun">
+                                <svg class="svg-sun" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet">
+                                <circle cx="50" cy="50" r="35" id="sun"></circle>
+                                </svg>
+                            </div>
+                            
+                            <div class="featured-title">
                                 <h3>Disfruta de nuestras experiencias</h3>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="home-featured-elements">
+                    <div class="featured-elements">
                         <div class="desktop-four-columns mobile-one-column">
                             <div class="column">
-                                <div class="home-featured-element">
-                                    <div class="home-featured-element-image-price">
-                                        <div class="home-featured-element-price">
-                                            <h4>€200 / día</h4>
+                                <div class="featured-element">
+                                    <div class="featured-element-image-price">
+                                        <div class="featured-element-price">
+                                            <h4>95 €</h4>
                                         </div>
-                                        <div class="home-featured-element-image">
-                                            <img src="images/alquiler-llaut.webp" alt="alquiler de llaut en Mallorca">
+                                        <div class="featured-element-image">
+                                            <img src="img/whaleshark.webp" alt="Buceo con Sharking">
                                         </div>
                                     </div>
             
-                                    <div  class="home-featured-element-description">
-                                        <div class="home-featured-element-title">
-                                            <h2>Pasa un día en un llaut</h2>
+                                    <div  class="featured-element-description">
+                                        <div class="featured-element-title">
+                                            <h2>Bautizo de Buceo</h2>
                                         </div>
-                                        <div class="home-featured-element-category">
-                                            <h3>Excursión</h3>
+                                        <div class="featured-element-category">
+                                            <h3>Experiencia de 1 día</h3>
                                         </div>
-                                        <div class="home-featured-element-text">
-                                            <p> Meis vocent signiferumque pri et. Facilis corpora recusabo ne quo</p>
+                                        <div class="featured-element-text">
+                                            <p>Pensado para personas que nunca han buceado y quieren experimentar lo que es respirar bajo el agua por primera vez</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="column">
-                                <div class="home-featured-element">
-                                    <div class="home-featured-element-image-price">
-                                        <div class="home-featured-element-price">
+                                <div class="featured-element">
+                                    <div class="featured-element-image-price">
+                                        <div class="featured-element-price">
                                             <h4>€50 / hora</h4>
                                         </div>
-                                        <div class="home-featured-element-image">
-                                            <img src="images/alquiler-motos-agua-mallorca.webp" alt="alquiler de llaut en Mallorca">
+                                        <div class="featured-element-image">
+                                            <img src="img/face to face.webp" alt="Buceo con Sharking">
                                         </div>
                                     </div>
             
-                                    <div class="home-featured-element-description">
-                                        <div class="home-featured-element-title">
-                                            <h2>Locura en una moto de agua</h2>
+                                    <div class="featured-element-description">
+                                        <div class="featured-element-title">
+                                            <h2>Sorkeling</h2>
                                         </div>
-                                        <div class="home-featured-element-category">
+                                        <div class="featured-element-category">
                                             <h3>Aventura</h3>
                                         </div>
-                                        <div class="home-featured-element-text">
-                                            <p> Meis vocent signiferumque pri et. Facilis corpora recusabo ne quo</p>
+                                        <div class="featured-element-text">
+                                            <p>Olvida de los mitos y nada entre tiburones</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="column">
-                                <div class="home-featured-element">
-                                    <div class="home-featured-element-image-price">
-                                        <div class="home-featured-element-price">
-                                            <h4>€100 / día</h4>
+                                <div class="featured-element">
+                                    <div class="featured-element-image-price">
+                                        <div class="featured-element-price">
+                                            <h4>desde 35 €</h4>
                                         </div>
-                                        <div class="home-featured-element-image">
-                                            <img src="images/alquiler-motos-mallorca.webp" alt="alquiler de llaut en Mallorca">
+                                        <div class="featured-element-image">
+                                            <img src="img/coral.webp" alt="Buceo con Sharking">
                                         </div>
                                     </div>
             
-                                    <div class="home-featured-element-description">
-                                        <div class="home-featured-element-title">
-                                            <h2>Pasea en moto por Palma</h2>
+                                    <div class="featured-element-description">
+                                        <div class="featured-element-title">
+                                            <h2>Inmersiones de buceo</h2>
                                         </div>
-                                        <div class="home-featured-element-category">
+                                        <div class="featured-element-category">
                                             <h3>Excursión</h3>
                                         </div>
-                                        <div class="home-featured-element-text">
-                                            <p> Meis vocent signiferumque pri et. Facilis corpora recusabo ne quo</p>
+                                        <div class="featured-element-text">
+                                            <p> Visita los fondos más espectaculares de la zona</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="column">
-                                <div class="home-featured-element">
-                                    <div class="home-featured-element-image-price">
-                                        <div class="home-featured-element-price">
-                                            <h4>€50 / día</h4>
+                                <div class="featured-element">
+                                    <div class="featured-element-image-price">
+                                        <div class="featured-element-price">
+                                            <h4>50 € / hora</h4>
                                         </div>
             
-                                        <div class="home-featured-element-image">
-                                            <img src="images/playas-mallorca.webp" alt="alquiler de llaut en Mallorca">
+                                        <div class="featured-element-image">
+                                            <img src="img/nidriza.webp" alt="Buceo con Sharking">
                                         </div>
                                     </div>
             
-                                    <div class="home-featured-element-description">
-                                        <div class="home-featured-element-title">
-                                            <h2>Disfruta de un día de playa</h2>
+                                    <div class="featured-element-description">
+                                        <div class="featured-element-title">
+                                            <h2>Una experincia inolvidable</h2>
                                         </div>
-                                        <div class="home-featured-element-category">
+                                        <div class="featured-element-category">
                                             <h3>Excursión</h3>
                                         </div>
-                                        <div class="home-featured-element-text">
-                                            <p> Meis vocent signiferumque pri et. Facilis corpora recusabo ne quo</p>
+                                        <div class="featured-element-text">
+                                            <p> El tibirón Nodriza no representa ninguna amenaza para el ser humano. Se alimenta de moluscos del fondo marino. Después de vivir esta experincia verás a los tiburones con otros ojos</p>
                                         </div>
                                     </div>
                                 </div>
@@ -205,10 +218,10 @@
             
             </div>
 
-            <div class="home-services">
+            <div class="textual-banner">
                 <div class="desktop-two-columns mobile-one-column">
                     <div class="column">
-                        <div class="home-services-description">
+                        <div class="textual-banner-description">
                             <p>
                                 This boat don't use fuel to sail. We recive the energy directly of wind.
                                 we use this boat to arrive at the divepoints without noise and dive very nearly 
@@ -223,8 +236,8 @@
                     </div>
 
                     <div class="column">
-                        <div class="home-services-image">
-                            <img src="img/catamaran.jpeg" alt="barco del viaje">
+                        <div class="textual-banner-image">
+                            <img src="img/catamaran.webp" alt="barco del viaje">
                         </div>
                     </div>
                 </div>
@@ -233,7 +246,7 @@
         
         <footer>
             <div class="footer-element copyright">
-                <p>@2048</p>
+                <p>Copyright ©</p>
             </div>
             <div class="footer-element author">
                 <a href="https://thispersondoesnotexist.com/"><p>enlace a una web de verdad</p></a>

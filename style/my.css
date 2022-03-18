@@ -1,0 +1,733 @@
+
+body{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 45%, rgba(53,134,255,1) 45%);
+    display:flex; 
+    flex-direction:column;    
+    margin:auto;
+    min-height: 100vh;
+}
+
+header{
+    background-color: hsl(216, 89%, 48%);
+    display:flex;
+    height: max-content;  
+    justify-content:space-between;
+    padding: 1 5rem;
+}
+
+main{
+    margin: 1em 0;
+    width: 100%;
+    z-index: 10;
+}
+
+footer{
+    margin-top: auto; 
+    width: 100%;
+}
+
+/*====================
+========Columns=======
+======================*/
+
+.desktop-five-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-five-columns .column{
+    width: 18%;
+}
+
+.desktop-four-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-four-columns .column{
+    width: 22%;
+}
+
+
+.desktop-three-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-three-columns .column{
+    width: 30%;
+}
+
+.desktop-two-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-two-columns .column{
+    width: 48%;
+}
+
+.desktop-two-columns-aside{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-two-columns-aside .column-aside{
+    width: 20%;
+}
+
+.desktop-two-columns-aside .column-main{
+    width: 75%;
+}
+
+.desktop-two-columns-inline{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-two-columns-inline .column{
+    width: 48%;
+}
+
+.desktop-two-columns-inline .column div{
+    display: flex;
+    margin-right: 1em;
+}
+
+.desktop-one-column{
+    width: 100%;
+}
+
+.desktop-one-column .column{
+    width: 100%;
+}
+
+
+/*====================
+===== Typography =====
+======================*/
+
+h1, h2, h3, h4, h5, h6, a, p{
+    color: hsl(0, 0%, 0%);
+}
+
+h1, h2, h3, h4 {
+    font-family: "Ubuntu";
+}
+
+h5, h6 {
+    font-family: "Ubuntu Condensed";
+}
+
+a, td, p, button{
+    font-family: "Ubuntu";
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h4 {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+a:focus, a:hover {
+    outline: none;
+    outline-offset: 0;
+    text-decoration: none;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+/*====================
+======= Image ========
+======================*/
+
+img {
+    max-width: 100%;
+}
+
+/*====================
+======= Waves ========
+======================*/
+
+.waves {
+    position: relative;
+}
+
+.waves :is(.wave) {
+    background-image: url('/img/wave.png');
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 35vh;
+    left: 0;
+    background-size: 1000px 100px;
+}
+
+.waves .wave#wave1 {
+    z-index: 2;
+    opacity: 0.9;
+    bottom: 20px;
+    animation: wave_animation_2 7s linear infinite;
+    -webkit-animation: wave_animation_2 4s linear infinite;
+}
+
+.waves .wave#wave2 {
+    z-index: 1;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: wave_animation_1 6s linear infinite;
+    -webkit-animation: wave_animation_1 3s linear infinite;
+}
+
+.waves .wave#wave3 {
+    z-index: 4;
+    opacity: 0.2;
+    bottom: 0;
+    animation: wave_animation_2 6s linear infinite;
+    -webkit-animation: wave_animation_2 2s linear infinite;
+}
+
+.waves .wave#wave4 {
+    z-index: 0;
+    opacity: 0.7;
+    bottom: -20px;
+    animation: wave_animation_1 6s linear infinite;
+    -webkit-animation: wave_animation_1 2s linear infinite;
+}
+
+@keyframes wave_animation_1 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes wave_animation_2 {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+
+/*====================
+======= Header ======
+======================*/
+
+.logo-title{
+    display:flex;
+    width: max-content;       
+}
+
+.logo{
+    width: max-content;
+}
+
+.logo svg{
+    width: 10rem;
+    height: 5rem;
+}
+
+.logo svg path{
+    fill:rgb(216, 92, 35);
+}
+
+.title{
+    margin: auto 0;
+}
+
+.title h1{
+    color: whitesmoke;
+}
+
+.menu{
+    margin: auto 0;
+}
+
+.menu ul{
+    color: hsl(19, 72%, 49%);
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 20rem;
+}
+
+.menu ul li a{
+    color: hsl(0, 0%, 100%);
+}
+
+/*====================
+======= Slider ======
+======================*/
+
+.home-slider{
+    height: 75vh;
+    margin-bottom: 10rem;    
+}
+
+.home-slider-image{
+    width: 100%;
+}
+
+.home-slider-title{
+    color: white;
+    text-align: right;
+    padding: 5rem;
+    position: relative;
+    z-index: 1004;
+}
+
+.home-slider-image, .slider-text{
+    position: absolute;
+}
+
+.slider-img{
+    z-index: 1000;
+    width: 100%;
+}
+
+.slider-text{
+    z-index: 1001;
+    top: 5%;
+    right: 15%;
+}
+
+.slider h2{
+    color: hsl(0, 0%, 100%);
+}
+
+/*====================
+======= Destacados ===
+======================*/
+
+.destacados-titulo{
+    margin: 5rem 0;
+} 
+
+.destacados-titulo h2{ 
+    text-align: center;
+    height: 2rem;
+}
+
+.destacados-fichas{ 
+    display: flex;
+    gap: 0.3rem;
+    background-color: hsl(216, 89%, 48%);
+
+}
+
+.destacados-ficha-descripción{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 25%;
+    text-size-adjust:inherit;
+}
+
+/*====================
+======= Services =====
+======================*/
+
+.services{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem;
+    margin-top: 5rem;
+}
+
+.services-text{
+    width: 60%;
+}
+
+.services-title{
+    margin-bottom: 1rem;
+}
+
+.services-title h3{
+    font-size: 2.5rem;
+}
+
+.services-img{
+    width: 35%;
+}
+
+.services-img img{
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.services-img img:hover{
+    border-radius: 50%;
+}
+
+/*====================
+===== Contact=====
+======================*/
+
+.contact{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.contact-title{
+    margin: 5rem 0;
+}
+
+.contact-title h2{
+    text-align: center;
+}
+
+.contact-data-option{
+    margin: 3rem;    
+}
+
+.contact-data-option-icon{
+    display: inline;    
+    margin-right: 2rem;    
+}
+
+.contact-data-option-icon svg{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.contact-data-option-text{
+    display: inline;
+}
+
+.contact-form-element{
+    margin-bottom: 2rem;
+}
+
+.contact-form-element-label{
+    margin-bottom: .5rem;
+}
+
+.contact-form-element-input{
+    border-radius: 5%;
+} 
+
+.contact-form-element-input input{
+    width: 98%;        
+}
+
+.contact-form-element-input textarea{
+     width: 100%;
+     height: 20vh;
+     border-radius: 5%;
+}
+
+.contact-form-element-button button{
+    background-color: hsl(239, 100%, 50%);
+    border-radius: 10%;
+    border-color: yellow;
+    color: hsl(34, 78%, 91%);       
+    float: right;
+    padding: .5rem 1rem;
+}
+
+/*====================
+======= Products =======
+======================*/
+
+.products{
+    margin: 2rem auto;
+    width: 90%;
+}
+
+.categories-title h3{ 
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.categories-list h4{ 
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.3rem;
+}
+
+.product-menu{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+}
+
+.product-menu-many span{
+    color: black;
+    border: #000000;        
+}
+
+.desktop-three-columns{
+    margin-bottom: 3rem;
+}
+
+.product{
+    border: #000000;
+}
+
+.product-image{
+    border-radius: 5rem;
+
+}
+
+.product-description{
+    background-color: hsl(240, 100%, 50%);
+    color: white;
+    text-align: center;
+}
+
+.product-price h4{
+    background-color: hsl(240, 100%, 50%);
+    color: white;
+    text-align: center;
+}
+
+.product-button button{
+    background-color: rgb(247, 160, 0);
+    border: none;
+    border-radius: 2rem;  
+    float: right;
+    font-weight: 600;  
+    margin-top: .5rem;
+    padding: .5rem 1rem;  
+}
+
+/*====================
+======= Footer =====
+======================*/
+
+.footer-contact{
+    background-color: rgb(27, 27, 216);
+    fill: #000000;
+}
+
+/* @media (min-width: 1920px)  */
+
+/* @media (max-width: 1024px)  */
+
+
+@media (max-width: 479px) {
+
+
+    /*====================
+    === Structure ===
+    ======================*/
+    body{
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 15%, rgba(53,134,255,1) 15%); 
+    }
+
+    header{
+        display: block;
+        padding: 1rem 1rem;
+    }
+
+     /*====================
+    === Mobile Columns ===
+    ======================*/
+
+    .mobile-four-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-four-columns .column{
+        width: 22%;
+    }
+
+    .mobile-three-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-three-columns .column{
+        width: 30%;
+    }
+
+    .mobile-three-columns-start{
+        display: flex;
+        justify-content: start;
+        width: 100%;
+    }
+
+    .mobile-three-columns-start .column{
+        width: inherit;
+    }
+
+    .mobile-two-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-two-columns .column{
+        width: 48%;
+    }
+
+    .desktop-two-columns-aside .column-aside{
+        display: none;
+    }
+
+    .mobile-two-columns-aside .column-main{
+        width: 100%;
+    }
+
+
+    .mobile-one-column{
+        width: 100%;
+    }
+
+    .mobile-one-column .column{
+        width: 100%;
+    }
+
+    .mobile-one-column-inline{
+        display: inherit;
+        width: 100%;
+    }
+
+    .mobile-one-column-inline .column{
+        border-bottom: 1px solid hsl(0, 0%, 87%);
+        display: flex;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+
+    .mobile-one-column-inline .column div{
+        display: inherit;
+        margin-right: 1em;
+        width: 100%;
+    }
+
+    /*====================
+    === Header ===
+    ======================*/
+
+    .menu{
+        display: none;
+    }
+
+    .logo{
+        margin: -2em 1em 0 0;
+    } 
+
+    .logo svg{
+        height: 7em;
+        width: 7em;
+    }
+
+    .title h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /*====================
+    ======== Home ========
+    ======================*/
+
+    .slider{
+        flex-wrap: wrap;        
+    }
+    
+    .destacados-titulo{
+        margin: 2rem 0;
+    }
+
+    .destacados-fichas{
+        flex-wrap: wrap;
+    }
+    
+    .services{
+        display: block;
+        margin: 1em;
+    }
+
+    .services-text{
+        width: 100%;
+    }
+
+    .services-img{
+        margin: 1em auto;
+        width: 80%;
+    }
+    
+    /*====================
+    ======= Contact =====
+    ======================*/
+
+    .mobile-one-column{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .mobile-one-column .column {
+        width: 100%;
+    }
+
+    .mobile-one-column .contact-data-option{ 
+        display: column;
+        margin: 0;       
+    }
+
+    .mobile-one-column .contact-data{ 
+        margin-bottom: 2rem;        
+    }
+
+    /*====================
+    ======= Products =====
+    ======================*/
+    
+    .products{
+        margin: 0 auto;
+        width: 80%;
+    }
+    
+    .product-menu{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .column{
+        margin-bottom: 1rem;
+    }
+
+    
+}
+
