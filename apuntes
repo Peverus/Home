@@ -57,7 +57,7 @@
                     los 4 lados        
             margin:     3em
 
-        auto sirve para centra
+        auto sirve para centrar
 
             margin: 1rem auto
         
@@ -65,9 +65,8 @@
 
             + tamaño
                     del texto
-                    del borde
-                    del borde  
-                    del magen
+                    del borde                     
+                    del margen
                     del padding
 
     3. Porcentaje se usa para   
@@ -102,7 +101,7 @@
         A todos los svg hay que darles ancho y alto, 
         si no les das altura y amplitud no paracen en la imagen.
 
-        Aun svg se la color con la propiedad "fill:" en el path
+        A un svg se la color con la propiedad "fill:" en el path
                             
                                 .logo svg path{
                                     fill:hsl(19, 100%, 50%)

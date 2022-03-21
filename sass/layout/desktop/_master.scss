@@ -1,11 +1,10 @@
 body{
-    background-color: $primary-color;
+    background: linear-gradient(180deg, hsl(0, 0%, 100%) 20%,hsl(29, 91%, 50%) 30%, hsl(49, 98%, 50%) 42%, hsl(216, 100%, 60%) 46%);    
     display:flex; 
     flex-direction:column;    
     margin: 1rem 0;
     min-height: 100vh;
-    width: 100%;
-}
+    width: 100%;}
 
 main{
     margin: 1rem 0;
