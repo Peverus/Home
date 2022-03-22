@@ -1,16 +1,6 @@
 .waves {
     position: relative;
 
-    &:is(.wave) {
-        background-image: url('/img/wave.png');
-        position: absolute;
-        width: 100%;
-        height: 100px;
-        top: 35vh;
-        left: 0;
-        background-size: 1000px 100px;
-    }
-
     .wave#wave1 {
         z-index: 2;
         opacity: 0.9;
@@ -43,6 +33,17 @@
         -webkit-animation: wave_animation_1 2s linear infinite;
     }
 }   
+
+.waves :is(.wave) {
+    background-image: url('/img/wave.png');
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 25vh;
+    left: 0;
+    background-size: 1000px 100px;
+}
+
 
 
 @keyframes wave_animation_1 {
