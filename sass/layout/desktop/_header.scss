@@ -9,12 +9,15 @@ header{
         display: flex;
         width: max-content;
 
-        .header-logo-image svg{
-            height: 3rem;
-            width: 3rem;
+        .header-logo-image{
+        
+            svg{
+                height: 3rem;
+                width: 3rem;
+            }
     
             path{
-                fill:$secondary-color;
+                fill:hsl(14, 100%, 50%);                        
             }
         }
 
@@ -31,14 +34,15 @@ header{
         margin-left: auto;
         width: max-content;
 
-        ul li{
-            color:hsl(0, 0%, 100%);
-            cursor: pointer;
-            display: inline;
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
+        ul{
+
+            li{
+                color:hsl(0, 0%, 100%);
+                cursor: pointer;
+                display: inline;
+                font-size: 1.5rem;
+                margin: 0 0.5rem;
+            }
         }
     }
 }
-
-

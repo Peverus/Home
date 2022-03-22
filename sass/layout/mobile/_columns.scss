@@ -28,6 +28,18 @@
     }
 }
 
+
+.mobile-three-columns-start{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+
+    .column{
+        width: inherit;
+    }
+}
+
+
 .mobile-two-columns{
     display: flex;
     justify-content: space-between;
@@ -38,6 +50,8 @@
     }
 }
 
+
+
 .mobile-one-column{
     width: 100%;
     display: block;
@@ -47,3 +61,22 @@
     }
 }
 
+
+
+.mobile-one-column-inline{
+    display: inherit;
+    width: 100%;
+
+    .column{
+        border-bottom: 1px solid hsl(0, 0%, 87%);
+        display: flex;
+        margin-bottom: 1rem;
+        width: 100%;
+
+        div{
+            display: inherit;
+            margin-right: 1rem;
+            width: 100%;
+        }
+    }
+}

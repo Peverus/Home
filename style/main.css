@@ -3,7 +3,7 @@
 ======================*/
 
 body{    
-    background: linear-gradient(180deg, rgb(255, 255, 255) 20%,rgb(243, 123, 11) 30%, rgb(250, 205, 3) 42%, rgba(53,134,255,1) 46%);
+    background: linear-gradient(180deg, hsl(0, 0%, 100%) 20%,hsl(29, 91%, 50%) 30%, hsl(49, 98%, 50%) 42%, hsl(216, 100%, 60%) 46%);
     display:flex; 
     flex-direction:column;    
     margin:auto;                   
